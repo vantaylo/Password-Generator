@@ -27,23 +27,33 @@ generateBtn.addEventListener("mouseup", function () {
 
   if (passNum === true) {
     passwordPossibilities += numbers;
+    console.log(passwordPossibilities);
   }
   if (passCaps === true) {
     passwordPossibilities += upperCaseLetters;
+    console.log(passwordPossibilities);
   }
   if (passLower === true) {
     passwordPossibilities += lowerCaseLetters;
+    console.log(passwordPossibilities);
   }
   if (passSym === true) {
     passwordPossibilities += sym;
+    console.log(passwordPossibilities);
   }
-
-  var result = "";
 
   // After you generate all the possiblities
   // loop "passLength" times and pick and random
-  // index between zero and passwordPossibilities.length
   // from password possibilies and add it to result
 
+  var randomIndex;
+  var result = [];
+
+  for (var i = 0; i < passLength; i++) {
+    randomIndex = Math.floor(Math.random() * passwordPossibilities.length);
+    result.push(passwordPossibilities[randomIndex]);
+  }
+
   // return result
+  alert(result);
 });
