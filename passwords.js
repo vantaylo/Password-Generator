@@ -3,29 +3,19 @@ var letters = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "0123456789";
 var sym = "!@#$%^&*()_+=[]{}|;':./,<>?";
 
-//document object variables
-var charLength = (document.getElementById(charLength).onclick = function () {
-  code;
-});
-var numSwitch = (document.getElementById(num).onclick = function () {
-  code;
-});
-var capitalSwitch = (document.getElementById(capital).onclick = function () {
-  code;
-});
-var lowerSwitch = (document.getElementById(lower).onclick = function () {
-  code;
-});
-var symSwitch = (document.getElementById(sym).onclick = function () {
-  code;
-});
-var generateBtn = (document.getElementById(generate).onclick = function () {
-  code;
-});
-var display = (document.getElementById(display).onclick = function () {
-  code;
+//capture slider value
+var passSliderLength = document.getElementById("length");
+passSliderLength.addEventListener("mouseup", function () {
+  console.log(this.value);
 });
 
-//submit function
+//capture requirements for submitting
+var generateBtn = document.getElementById("generate");
 
-//generator - function with for loop
+generateBtn.addEventListener("mouseup", function () {
+  var passLength = document.getElementById("length").value;
+  var passNum = document.getElementById("numSwitch").checked;
+  var passCaps = document.getElementById("capitalSwitch").checked;
+  var passLower = document.getElementById("lowerSwitch").checked;
+  var passSym = document.getElementById("symSwitch").checked;
+});
