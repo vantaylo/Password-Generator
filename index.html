@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>PASSWORD GENERATOR</title>
+    <title>Password Generator</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -25,16 +25,27 @@
     ></script>
   </head>
 
-  <!-- Settings -->
-  <!-- length 8-128 characters -->
-  <!-- required numbers letters  -->
-  <!-- required capital letters  -->
-  <!-- required lowercase letters  -->
-  <!-- required symbols -->
-
+  <!-- Image and text -->
   <body>
-    <div class="card-header">
-      <h3 class="card-title">Password Requirements</h3>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img
+          src="img/icon.png"
+          width="30"
+          height="30"
+          class="d-inline-block align-top"
+          alt=""
+        />
+        Password Generator
+      </a>
+    </nav>
+
+    <!-- Settings -->
+
+    <div class="container text-center">
+      <h3 class="title">Password Requirements</h3>
+
+      <!-- Slider - length 8-128 characters -->
 
       <class class="card text-center"></class>
       <div class="d-flex justify-content-center my-4">
@@ -50,6 +61,8 @@
         <span class="font-weight-bold text-primary ml-2 valueSpan2"></span>
       </div>
     </div>
+
+    <!-- required numbers letters  -->
     <div class="form-check text-center">
       <input class="form-check-input" type="checkbox" value="" id="numSwitch" />
       <label class="form-check-label" for="numSwitch">
@@ -57,6 +70,7 @@
       </label>
     </div>
 
+    <!-- required capital letters  -->
     <div class="form-check text-center">
       <input
         class="form-check-input"
@@ -69,6 +83,7 @@
       </label>
     </div>
 
+    <!-- required lowercase letters  -->
     <div class="form-check text-center">
       <input
         class="form-check-input"
@@ -80,18 +95,22 @@
         Include Lowercase
       </label>
     </div>
+
+    <!-- required symbols -->
     <div class="form-check text-center">
       <input class="form-check-input" type="checkbox" value="" id="symSwitch" />
       <label class="form-check-label" for="symSwitch">
         Include Symbols
       </label>
     </div>
+
     <!--Generate Button -->
     <div class="button text-center" type="button" value="" id="generate">
       <label class="button" for="generate"></label>
       <a href="#" class="btn btn-primary">Generate</a>
     </div>
-  </body>
+    </body>
+  </div>
 
   <footer>
     <script type="text/javascript" src="passwords.js"></script>
