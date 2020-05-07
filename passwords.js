@@ -23,33 +23,42 @@ generateBtn.addEventListener("mouseup", function () {
 
   // using if statements, if checkbox is true,
   // add that string to passwordPossiblities
+  var result = [];
   var passwordPossibilities = "";
 
   if (passNum === true) {
+    result.push(numbers[Math.floor(Math.random() * numbers.length)]);
     passwordPossibilities += numbers;
     console.log(passwordPossibilities);
   }
   if (passCaps === true) {
+    result.push(
+      upperCaseLetters[Math.floor(Math.random() * upperCaseLetters.length)]
+    );
     passwordPossibilities += upperCaseLetters;
     console.log(passwordPossibilities);
   }
   if (passLower === true) {
+    result.push(
+      lowerCaseLetters[Math.floor(Math.random() * lowerCaseLetters.length)]
+    );
     passwordPossibilities += lowerCaseLetters;
     console.log(passwordPossibilities);
   }
   if (passSym === true) {
+    result.push(sym[Math.floor(Math.random() * sym.length)]);
     passwordPossibilities += sym;
     console.log(passwordPossibilities);
   }
+  console.log(result);
 
   // After you generate all the possiblities
   // loop "passLength" times and pick and random
   // from password possibilies and add it to result
 
   var randomIndex;
-  var result = [];
 
-  for (var i = 0; i < passLength; i++) {
+  for (var i = result.length; i < passLength; i++) {
     randomIndex = Math.floor(Math.random() * passwordPossibilities.length);
     result.push(passwordPossibilities[randomIndex]);
   }
