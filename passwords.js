@@ -7,8 +7,10 @@ var newPassword = [];
 
 //capture slider value
 var passSliderLength = document.getElementById("length");
-passSliderLength.addEventListener("mouseup", function () {
+passSliderLength.addEventListener("input", function () {
   console.log(this.value);
+
+  document.getElementById("sliderValue").innerHTML = this.value;
 });
 
 //capture requirements for submitting
