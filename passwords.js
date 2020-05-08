@@ -28,6 +28,11 @@ generateBtn.addEventListener("mouseup", function () {
   var result = [];
   var passwordPossibilities = "";
 
+  if (!passNum && !passCaps && !passLower && !passSym) {
+    alert("must pick at least one requirement");
+    return;
+  }
+
   if (passNum === true) {
     result.push(numbers[Math.floor(Math.random() * numbers.length)]);
     passwordPossibilities += numbers;
